@@ -35,7 +35,7 @@ const BooksDtails = () => {
                <p>Year of Publishing: {yearOfPublishing}</p>
                <p>Rating {rating}</p>
                <div className="flex gap-4 my-3">
-               <NavLink><button className='btn border border-green-600'>Read</button></NavLink>
+               <NavLink to={'/'}><button className='btn border border-green-600'>Read</button></NavLink>
                <NavLink><button className='btn border border-green-600'>Wishlist</button></NavLink>
                </div>
             </div>
