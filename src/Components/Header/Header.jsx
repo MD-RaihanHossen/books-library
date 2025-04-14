@@ -22,7 +22,7 @@ return (
                     {btn}
                 </ul>
             </div>
-            <a className="btn btn-ghost font-bold text-2xl">Book Vibe</a>
+            <a className="btn btn-ghost font-extrabold text-4xl">Book Vibe</a>
         </div>
         <div className="navbar-center hidden lg:flex">
             <ul className="menu menu-horizontal px-1">

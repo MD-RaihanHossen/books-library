@@ -1,13 +1,14 @@
  import { FcRating } from "react-icons/fc";
- import { NavLink } from "react-router-dom";
+ import { Link, NavLink } from "react-router-dom";
 
 const User = ({user}) => {
-    const {bookName, author, image, rating, category, tags  } = user
+    const {bookName, author, image, rating, category, tags , bookId } = user
     const [tag1, tag2] = tags
 
 
     return (
-        <div className=" border border-gray-400 shadow flex justify-center items-center w-[374px] h-[482px] mx-auto mb-20 rounded-2xl ">
+        <Link to={`/user/${bookId}`}>
+         <div className=" border border-gray-400 shadow flex justify-center items-center w-[374px] h-[482px] mx-auto mb-20 rounded-2xl ">
             <div>
             <div className="w-[326px] h-[230px] flex justify-center items-center bg-gray-200 rounded-2xl">
                 <img className="w-[131px] h-[156px] object-cover" src={image} alt="" />
@@ -30,7 +31,7 @@ const User = ({user}) => {
                 </div>
             </div>
             </div>
-        </div>
+        </div></Link>
     );
 };
 
