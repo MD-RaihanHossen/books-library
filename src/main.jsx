@@ -13,6 +13,8 @@ import Home from './Components/Home/Home.jsx';
 import Deshbord from './Components/Deshbord/Deshbord.jsx';
 import BooksDtails from './Components/BooksDtails/BooksDtails.jsx';
 
+import { ToastContainer } from 'react-toastify';
+
 const router = createBrowserRouter([
   {
     path : '/',
@@ -25,7 +27,13 @@ const router = createBrowserRouter([
       },
       {
         path : '/beshbord',
-        element: <Deshbord></Deshbord>
+        element: <Deshbord></Deshbord>, 
+        loader : () => fetch('../public/data.json')
+      },
+      {
+        path : '/beshbord',
+        element: <Deshbord></Deshbord>, 
+        loader : () => fetch('../public/data.json')
       },
       {
         path: '/user/:userId',
@@ -43,5 +51,6 @@ const router = createBrowserRouter([
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <RouterProvider router={router}></RouterProvider>
+    <ToastContainer></ToastContainer>
   </StrictMode>,
 )

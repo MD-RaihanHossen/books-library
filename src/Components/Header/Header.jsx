@@ -22,7 +22,7 @@ return (
                     {btn}
                 </ul>
             </div>
-            <a className="btn btn-ghost font-extrabold text-4xl">Book Vibe</a>
+            <NavLink to={'/'}><button className="btn btn-ghost font-extrabold text-4xl">Book Vibe</button></NavLink>
         </div>
         <div className="navbar-center hidden lg:flex">
             <ul className="menu menu-horizontal px-1">
